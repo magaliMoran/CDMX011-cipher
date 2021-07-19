@@ -5,10 +5,73 @@
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+      
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
+    <header class="header"> 
+		<figure class="logo">
+				<img src="https://www.revistaneo.com/sites/default/files/inline-images/logo-mujeres.jpg" width="130" alt="logo">
+			</figure>
+<!--menu de navegación--> 
+    <nav>
+			<ol>
+			<!--ittems de lista-->
+			<li>
+				<!-- a indica hay un enlace "#" da el envio-->
+				<a class="link" href= "#Inicio">Inicio</a>
+<!--crear indicacion para dirigir al inicio-->
+      </li> 
+      <li>
+				<a class="link" href= "#Recursos">Recuros</a> 
+      </li>
+      </ol>
+    </nav>
+		</header>    
+
+<!--<section>seccion principal</section>-->
+    <section class="womans">
+		<h1>
+			Progama: Mujeres SOS.  <br/> App que permite Cifrar y decifrar mensajes.
+		</h1>    		
+    </section>
+<!--Seccion de cifrar-->
+<section class="encriptar-desencriptar">
+  <article class="cifrars">
+    <div class="solicitudCifrars"> 		
+      <h3>Mensaje para Cifrar</h3> 
+      <!--<form>--SIRVE PARA DEPOSITAR LA INFORMACION, NO ES NECESARIO-->
+        <input type="number" id="Desplazamiento" placeholder="N° de desplazamiento" min="01" max="26" size="40" /> <br>
+        <textarea id="ingTextoHtml" placeholder="Escribe tu mensaje" size="50"></textarea>
+        <input type="button" id="botonEncriptar" class="boton" value="CIFRAR"/> 
+        <!--</form>--> 
+       
     </div>
-    <script src="index.js" type="module"></script>
+    <div class="resEncriptar">                   
+<!--mostrar el resultado encriptado -->
+      <h3>Mensaje Cifrado</h3>
+      <label class="resCifrado" id="resultadoCifrado">Resultado</label> 
+    </div>
+</article>
+<!--Seccion de Desencriptar-->
+<article class="DesEncriptar">
+   <div class="solDesEncriptar">
+    <h3>Mensaje para DesEncriptar</h3>
+    
+      <input type="number" id="DesplazamientoDes" placeholder="N° de desplazamiento" min="01" max="26" size="40" /> <br>
+      <textarea id="ingTextDesC" placeholder="Escribe tu mensaje" size="50"  required></textarea>
+        <input type="button" id="botonDesEncriptar" class="boton" value="DESCIFRAR"/> 
+    
+  </div>
+  <div class="resDesEncriptar"> 		
+      <h3>Mensaje DesEncriptado</h3> 
+      <label class="resDesCifrado" id="resultadoDesCifrado">Resultado</label> 
+    </div>
+</article>
+</section>
+
+  <footer class="footer"> </footer>
+  <p>2021 Magali 
+  </p>  
+  <script src="index.js" type="module"></script>
   </body>
 </html>
+
