@@ -8,9 +8,9 @@ import cipher from './cipher.js';
  function deEncode () {
    let string=document.getElementById("ingTextoHtml").value.toUpperCase();
    let offset=Number(document.getElementById("Desplazamiento").value);
-   let resultado=cipher.encode(offset, string);// esta es una ejecucion
+   // esta es una ejecucion
    let mostrarResultado=document.getElementById("resultadoCifrado");
-   mostrarResultado.innerHTML=resultado;
+   mostrarResultado.innerHTML=cipher.encode(offset, string);
    
 }
 
@@ -20,6 +20,7 @@ document.getElementById("botonDesEncriptar").addEventListener("click",deDecode);
 function deDecode () {
   let string=document.getElementById("ingTextDesC").value.toUpperCase();
   let offset=Number(document.getElementById("DesplazamientoDes").value);
+  console.log(offset)
   let resultado=cipher.decode(offset, string);// esta es una ejecucion
    let mostrarResultado=document.getElementById("resultadoDesCifrado");
    mostrarResultado.innerHTML=resultado;
