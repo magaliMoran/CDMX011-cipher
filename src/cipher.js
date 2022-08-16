@@ -1,6 +1,7 @@
 const cipher = {
   encode:(offset,string) =>{ 
-    if(offset==null) {
+    if(offset==0) {
+      alert("no olvide indicar el desplazamiento")
       throw TypeError ("no olvide indicar el desplazamiento");    
     }
                
@@ -19,13 +20,16 @@ const cipher = {
         stringCifrado += string[i];        
       }      
     }
+    //console.log(Object.keys(cipher))
     return stringCifrado
+    
   },      
   
    //aqui funcion decode
    
   decode:(offset,string) =>{
-    if(offset==null) {
+    if(offset==0) {
+      alert("no olvide indicar el desplazamiento")
       throw TypeError ("no olvide indicar el desplazamiento");    
     }
 
